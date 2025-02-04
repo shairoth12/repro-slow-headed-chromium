@@ -2,6 +2,11 @@ from playwright.sync_api import Page, expect
 
 
 def test_bbc(page: Page):
+    """
+    Some basic navigations and scrolling on the BBC website,
+    to highlight the slow performance of the headed browser.
+    """
+
     page.goto("https://www.bbc.com")
     open_menu_button = page.get_by_role("button", name="Open menu")
     open_menu_button.click()
@@ -12,10 +17,8 @@ def test_bbc(page: Page):
 
     footer = page.get_by_test_id("footer-content")
     footer.scroll_into_view_if_needed()
-
     nav_to_terms_of_use_from_footer = footer.get_by_text("Terms of Use")
     expect(nav_to_terms_of_use_from_footer).to_be_visible()
-
     with page.expect_navigation():
         nav_to_terms_of_use_from_footer.click()
 

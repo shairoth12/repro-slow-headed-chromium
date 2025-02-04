@@ -8,10 +8,7 @@
             "ms-python.vscode-pylance",
             "ms-python.black-formatter",
             "ms-python.pylint",
-            "ms-python.isort",
-            "eamodio.gitlens",
             "ms-azuretools.vscode-docker",
-            "vscode-icons-team.vscode-icons",
             "pamaron.pytest-runner"
          ]
       }

@@ -15,28 +15,12 @@
                 "--profile",
                 "black"
         ],
-        "python.analysis.diagnosticSeverityOverrides": {
-                "reportMissingImports": "none",
-                "reportInvalidTypeForm": "none",
-                "python.analysis.exclude": [
-                        "hope/infra/generated/**"
-                ]
-        },
         "pylint.args": [
                 "--init-hook",
                 "import sys; sys.path.insert(0, './')",
         ],
-        "pylint.severity": {
-                "refactor": "Warning",
-        },
-        // "python.analysis.extraPaths": [
-        //         "src"
-        // ],
         "python.testing.unittestEnabled": false,
         "python.testing.pytestEnabled": true,
-        // "python.testing.pytestArgs": [
-        //         "src"
-        // ],
         "remote.localPortHost": "allInterfaces",
         "files.insertFinalNewline": true,
         "files.exclude": {
@@ -46,6 +30,4 @@
                 "**/__pycache__": true,
                 "**/.pytest_cache": true,
         },
-        "remote.autoForwardPortsFallback": 0,
-        "debugpy.debugJustMyCode": false
 }
