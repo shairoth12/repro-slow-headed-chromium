@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright/python:v1.50.0-jammy
+FROM mcr.microsoft.com/playwright/python:v1.42.0-jammy
 
 ARG USER_NAME="pwuser"
 ARG GROUP_NAME="pwuser"
@@ -9,7 +9,7 @@ RUN git lfs install
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
-RUN playwright install --no-shell
+RUN playwright install
 
 RUN echo ${USER_NAME} ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${USER_NAME} \
     && chmod 0440 /etc/sudoers.d/${USER_NAME}
