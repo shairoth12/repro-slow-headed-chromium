@@ -1,5 +1,7 @@
 # Slow Headed Chromium for Playwright Tests on MacOS VSCode Dev-Container
 
+## Version 1.50
+
 ## XQuartz Setup
 
 1. Install XQuartz (e.g. via homebrew - `brew install xquartz --cask`)
