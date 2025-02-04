@@ -1,0 +1,27 @@
+{
+   "name": "Faith",
+   "dockerFile": "Dockerfile",
+   "customizations": {
+      "vscode": {
+         "extensions": [
+            "ms-python.python",
+            "ms-python.vscode-pylance",
+            "ms-python.black-formatter",
+            "ms-python.pylint",
+            "ms-python.isort",
+            "eamodio.gitlens",
+            "ms-azuretools.vscode-docker",
+            "vscode-icons-team.vscode-icons",
+            "pamaron.pytest-runner"
+         ]
+      }
+   },
+   "runArgs": [
+      "--network=host",
+      "--add-host=host.docker.internal:host-gateway"
+   ],
+   "containerUser": "pwuser",
+   "remoteEnv": {
+      "DISPLAY": "host.docker.internal:0"
+   }
+}
